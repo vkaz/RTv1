@@ -12,7 +12,7 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# define BUFF_SIZE  32
+# define BUFF_SIZE  128
 
 # include <unistd.h>
 # include <stdlib.h>
@@ -52,6 +52,8 @@ void				ft_memdel(void **ap);
 void				ft_putstr(char const *str);
 void				ft_strclr(char *s);
 void				ft_putnbr_fd(int n, int fd);
+void				ft_lstpushback(t_list **tmp, void const *content,
+					size_t content_size);
 
 int					ft_strequ(char const *s1, char const *s2);
 int					ft_atoi(char *str);

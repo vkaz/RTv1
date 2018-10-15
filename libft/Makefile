@@ -32,6 +32,7 @@ ft_putstr.c ft_putendl.c ft_putnbr.c ft_putstr_fd.c ft_putendl_fd.c \
 ft_putnbr_fd.c ft_strchr.c ft_strrchr.c ft_lstnew.c ft_lstdelone.c \
 ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c ft_swap.c ft_range.c \
 ft_div_mod.c ft_recursive_factorial.c ft_sqrt.c get_next_line.c \
+ft_lstpushback.c \
 
 OBJ=$(SRC:.c=.o)
 	

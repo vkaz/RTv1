@@ -12,6 +12,15 @@
 
 #include "libft.h"
 
+static int		op(char **str, char *buf)
+{
+	if (ft_strlen(*str) == 0)
+		return (-2);
+	*str = ft_strjoin(*str, "\n");
+	free(buf);
+	return (0);
+}
+
 static int		read_file(int fd, char **str)
 {
 	char				*buf;
@@ -31,13 +40,10 @@ static int		read_file(int fd, char **str)
 		ft_memdel((void**)&d);
 	}
 	free(buf);
-	buf = NULL;
+	buf = *str;
 	if (i == 0)
-	{
-		if (ft_strlen(*str) == 0)
+		if (op(str, buf) == -2)
 			return (-2);
-		*str = ft_strjoin(*str, "\n");
-	}
 	return (i);
 }
 

@@ -27,7 +27,7 @@ INC_PATH = ./includes/
 
 OBJ_NAME = $(SRC_NAME:.c=.o)
 INC_NAME = rtv1.h
-SRC_NAME = main.c
+SRC_NAME = main.c draw.c calc.c vec.c help.c rot.c put.c parse.c name.c get_cam.c get_obj.c inside.c
 
 SRC = $(addprefix ,$(SRC_NAME))
 OBJ = $(addprefix $(OBJ_PATH),$(OBJ_NAME))
@@ -47,7 +47,7 @@ $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 clean:
 		@make -C $(LFT_PATH) clean
 		@rm -rf $(OBJ_PATH)
-		@echo "$(RED)RTv1:\t\tRemoving OBJ path: ./obj/$(RED)"
+		@echo "$(RED)RTv1:\t\tRemoving OBJ path: ./obj$(RED)"
 
 fclean: clean
 		@make -C $(LFT_PATH) fclean

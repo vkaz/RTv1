@@ -1,0 +1,52 @@
+camera
+{
+	cam_pos(20 1 0)
+	cam_dir(0 15 0)
+	display_size(1000 1000)
+}
+
+scene
+{
+    light
+	{
+		pos(100 10 -10)
+		power(10);
+	}
+	object(cylinder)
+	{
+		pos(-5 0 -3)
+		size(1)
+		color(36 102 15)
+		rot(0 0 0)
+		spec(50)
+	}
+	object(cone)
+	{
+		pos(5 0 0)
+		size(1)
+		color(246 255 0)
+		rot(0 10 0)
+		spec(1)
+	}
+	object(sphere)
+	{
+		pos(1 0 -1)
+		size(1)
+		color(153 0 0)
+		spec(100)
+	}
+	object(plane)
+	{
+		pos(0 0 15)
+		color(0 97 255)
+        rot(0 0 1)
+		spec(10)
+	}
+	object(plane)
+	{
+		pos(0 -1 0)
+		color(99 99 93)
+        rot(0 1 0)
+		spec(10)
+	}
+}

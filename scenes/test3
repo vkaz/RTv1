@@ -1,0 +1,23 @@
+camera
+{
+	cam_pos(0 0 0)
+	cam_dir(0 0 0)
+	display_size(1000 1000)
+}
+
+scene
+{
+    light
+	{
+		pos(50 0 -100)
+		power(10);
+	}
+	object(cylinder)
+	{
+		pos(0 0 5)
+		size(1)
+		color(36 102 12)
+        rot(0 0 0)
+		spec(100)
+	}
+}

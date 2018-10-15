@@ -1,0 +1,31 @@
+camera
+{
+	cam_pos(0 2 -20)
+	cam_dir(0 0 0)
+	display_size(1000 1000)
+}
+
+scene
+{
+    light
+	{
+		pos(30 5 -100)
+		power(10);
+	}
+	object(cone)
+	{
+		pos(0 0 0)
+		size(1)
+		color(246 255 0)
+        rot(0 0 0)
+		spec(100)
+	}
+	object(plane)
+	{
+		pos(0 -1 0)
+		size(1)
+		color(246 255 250)
+        rot(0 -10 0)
+		spec(100)
+	}
+}
