@@ -43,7 +43,11 @@ void			put_pix(t_mlx *mlx, int x, int y)
 	mlx->colo = (((int)mlx->color.r & 0xff) << 16) + (((int)mlx->color.g &
 		0xff) << 8) + ((int)mlx->color.b & 0xff);
 	if (len <= mlx->vw * mlx->vh && len > -1)
-		mlx->data[len] = mlx->colo;
+	{
+		SDL_SetRenderDrawColor(mlx->rend, mlx->colo >> 16, mlx->colo >> 8, mlx->colo, 0xff);
+		SDL_RenderDrawPoint(mlx->rend, x, y);
+	}
+		// mlx->data[len] = mlx->colo;
 }
 
 t_vector		vecnorm(t_mlx *mlx)

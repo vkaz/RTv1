@@ -9,7 +9,7 @@ scene
 {
     light
 	{
-		pos(100 10 -10)
+		pos(50 1 -10)
 		power(10);
 	}
 	object(cylinder)
@@ -17,7 +17,7 @@ scene
 		pos(-5 0 -3)
 		size(1)
 		color(36 102 15)
-		rot(0 0 0)
+		rot(0 10 0)
 		spec(50)
 	}
 	object(cone)
@@ -47,6 +47,6 @@ scene
 		pos(0 -1 0)
 		color(99 99 93)
         rot(0 1 0)
-		spec(10)
+		spec(0)
 	}
 }

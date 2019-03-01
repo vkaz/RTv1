@@ -2,7 +2,7 @@ camera
 {
 	cam_pos(0 0 0)
 	cam_dir(0 0 0)
-	display_size(1000 1000)
+	display_size(1080 720)
 }
 
 scene

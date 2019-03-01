@@ -17,7 +17,7 @@ scene
 		pos(-5 0 0)
 		size(1)
 		color(36 102 15)
-        rot(0 0 4)
+        rot(1 6 0)
 		spec(50)
         power(10)
 	}
@@ -26,7 +26,7 @@ scene
 		pos(5 0 0)
 		size(1)
 		color(246 255 0)
-		rot(-3 10 0)
+		rot(-3 7 0)
 		spec(10)
 	}
 	object(sphere)

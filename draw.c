@@ -63,14 +63,10 @@ void		trace(t_mlx *mlx)
 	{
 		mlx->intensity = 0;
 		mlx->color = mlx->i[mlx->f].color;
-		if (ft_strcmp(mlx->i[mlx->f].name, "plane") == 0)
-			mlx->dir2 = rot(mlx->dir, mlx->i[mlx->f].rot, 0);
-		else
-			mlx->dir2 = rot(mlx->dir, mlx->i[mlx->f].rot, 1);
-		mlx->point = vectadd(mlx->origin, vecscale(mlx->hit, mlx->dir2));
+		mlx->point = vectadd(mlx->origin, vecscale(mlx->hit, mlx->dir));
 		mlx->normal = vecsub(mlx->point, mlx->i[mlx->f].vec);
 		mlx->normal = vecscale(1.0 / length(mlx->normal), mlx->normal);
-		mlx->view = vecscale(-1, mlx->dir2);
+		mlx->view = vecscale(-1, mlx->dir);
 		lighti(mlx, mlx->f);
 	}
 	put_pix(mlx, mlx->x, mlx->y);

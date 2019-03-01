@@ -9,7 +9,7 @@ scene
 {
     light
 	{
-		pos(30 5 -100)
+		pos(-30 5 -100)
 		power(10);
 	}
 	object(cone)
@@ -17,7 +17,7 @@ scene
 		pos(0 0 0)
 		size(1)
 		color(246 255 0)
-        rot(0 0 0)
+        rot(0 10 0)
 		spec(100)
 	}
 	object(plane)
@@ -25,7 +25,7 @@ scene
 		pos(0 -1 0)
 		size(1)
 		color(246 255 250)
-        rot(0 -10 0)
+        rot(0 10 0)
 		spec(100)
 	}
 }

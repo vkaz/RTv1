@@ -18,8 +18,8 @@ RED=\033[31m
 YELL=\033[33m
 
 cc = gcc
-C_FLAGS = -Wall -Wextra #-Werror -g
-FRAM = -I minilibx -lmlx -framework OpenGL -framework AppKit -g
+C_FLAGS = -Wall #-Wextra -Werror -g
+FRAM = -I include -L lib -l SDL2-2.0.0
 
 OBJ_PATH = ./obj/
 LFT_PATH = ./libft/

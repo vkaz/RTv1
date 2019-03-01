@@ -18,7 +18,11 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <errno.h>
 # include "libft/libft.h"
+# include "include/SDL2/SDL.h"
+# include "include/GL/glew.h"
+# include "include/SDL2/SDL_opengl.h"
 
 typedef struct		s_col
 {
@@ -53,8 +57,11 @@ typedef struct		s_light
 typedef struct		s_mlx
 {
 	void			*mlx;
-	void			*win;
+	// void			*win;
 	void			*img;
+	SDL_Window		*win;
+	SDL_Renderer	*rend;
+	SDL_GLContext glcontext;
 	int				*data;
 	int				bpp;
 	int				sizeline;
