@@ -26,6 +26,6 @@ scene
 		size(1)
 		color(246 255 250)
         rot(0 10 0)
-		spec(100)
+		spec(0)
 	}
 }

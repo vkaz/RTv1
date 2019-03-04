@@ -19,7 +19,7 @@ YELL=\033[33m
 
 cc = gcc
 C_FLAGS = -Wall #-Wextra -Werror -g
-FRAM = -I include -L lib -l SDL2-2.0.0
+FRAM = -I include -L lib -l SDL2-2.0.0 -framework OpenGL
 
 OBJ_PATH = ./obj/
 LFT_PATH = ./libft/

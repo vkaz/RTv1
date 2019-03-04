@@ -57,7 +57,6 @@ typedef struct		s_light
 typedef struct		s_mlx
 {
 	void			*mlx;
-	// void			*win;
 	void			*img;
 	SDL_Window		*win;
 	SDL_Renderer	*rend;
@@ -69,6 +68,7 @@ typedef struct		s_mlx
 	int				iter;
 	int				l;
 	int				i1;
+	int				i2;
 	int				ic;
 	int				is;
 	int				ip;
@@ -123,6 +123,7 @@ typedef struct		s_mlx
 	double			t_max;
 }					t_mlx;
 
+t_vector		vecsub1(t_vector v1, t_vector v2);
 void				sphere(t_mlx *mlx, t_vector dir, t_vector origin);
 t_vector			vecnorm(t_mlx *mlx);
 void				draw(t_mlx *mlx);
@@ -152,7 +153,7 @@ void				get2(t_list *list, t_mlx *mlx);
 char				*find(char *str, char start, char end);
 double				min_max(double x, double min, double max);
 void				name(char *name, t_mlx *mlx, int i);
-void				get_light(t_list *list, t_mlx *mlx);
+void				get_light(t_list *list, t_mlx *mlx, int i);
 void				del(void *data, size_t size);
 void				free_list_str(char **list);
 void				spaces(t_list *list);

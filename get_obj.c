@@ -76,6 +76,7 @@ void	get_object(t_list *list, int i, t_mlx *mlx)
 
 void	get2(t_list *list, t_mlx *mlx)
 {
+	int i = 0;
 	spaces(list);
 	while (list && !ft_strstr(list->content, "}"))
 	{
@@ -84,9 +85,10 @@ void	get2(t_list *list, t_mlx *mlx)
 			spaces(list);
 			while (list && !ft_strstr(list->content, "}"))
 			{
-				get_light(list, mlx);
+				get_light(list, mlx, i);
 				list = list->next;
 			}
+			i++;
 		}
 		else if (ft_strstr(list->content, "object"))
 		{

@@ -1,7 +1,7 @@
 camera
 {
 	cam_pos(20 1 0)
-	cam_dir(0 15 0)
+	cam_dir(0 -15 0)
 	display_size(1000 1000)
 }
 
@@ -9,7 +9,7 @@ scene
 {
     light
 	{
-		pos(50 1 -10)
+		pos(20 1 -10)
 		power(10);
 	}
 	object(cylinder)

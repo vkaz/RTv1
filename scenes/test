@@ -1,8 +1,8 @@
 camera
 {
-	cam_pos(0 0 0)
+	cam_pos(0 1 -10)
 	cam_dir(0 0 0)
-	display_size(1080 720)
+	display_size(640 480)
 }
 
 scene

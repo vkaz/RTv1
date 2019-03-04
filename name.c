@@ -66,7 +66,7 @@ void		i_null(t_mlx *mlx)
 	mlx->isp = 0;
 }
 
-void		get_light(t_list *list, t_mlx *mlx)
+void		get_light(t_list *list, t_mlx *mlx, int i)
 {
 	char *str;
 	char **str1;

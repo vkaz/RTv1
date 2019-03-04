@@ -27,6 +27,13 @@ t_vector		vecsub(t_vector v1, t_vector v2)
 	ress = (t_vector){v1.x - v2.x, v1.y - v2.y, v1.z - v2.z};
 	return (ress);
 }
+t_vector		vecsub1(t_vector v1, t_vector v2)
+{
+	t_vector ress;
+
+	ress = (t_vector){v1.x + v2.x, v1.y + v2.y, v1.z + v2.z};
+	return (ress);
+}
 
 double			vecdot(t_vector dir1, t_vector dir2)
 {

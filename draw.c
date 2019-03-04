@@ -23,6 +23,8 @@ int			shadow(t_mlx *mlx)
 {
 	mlx->t_min = 0.001;
 	mlx->t_max = 1;
+	// mlx->t_min = 1;
+	// mlx->t_max = INFINITY;
 	mlx->shadow = closes(mlx, mlx->point, mlx->vec_l);
 	if (mlx->shadow != INFINITY)
 	{
@@ -37,6 +39,7 @@ void		lighti(t_mlx *mlx, int a)
 	mlx->len = length(mlx->normal);
 	mlx->lenn = length(mlx->view);
 	mlx->vec_l = vecsub(mlx->light.position, mlx->point);
+	// mlx->vec_l = mlx->light.position;
 	if (shadow(mlx) == -1)
 		return ;
 	mlx->n_dot_l = vecdot(mlx->normal, mlx->vec_l);
@@ -46,7 +49,7 @@ void		lighti(t_mlx *mlx, int a)
 	mlx->vec_r = vecsub(vecscale(2.0 * vecdot(mlx->normal, mlx->vec_l),
 		mlx->normal), mlx->vec_l);
 	mlx->dot_v = vecdot(mlx->vec_r, mlx->view);
-	if (mlx->dot_v > 0)
+	if (mlx->dot_v > 0 && (ft_strcmp(mlx->i[a].name, "plane") != 0))
 		mlx->intensity += mlx->light.intensity * pow(mlx->dot_v /
 				(length(mlx->vec_r) * mlx->lenn), mlx->i[a].spec);
 	intens(mlx);

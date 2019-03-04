@@ -58,6 +58,7 @@ int			count_ob(t_list *list, t_mlx *mlx)
 	if (a == 0 || l == 0)
 		return (-1);
 	mlx->i = (t_vec *)malloc(sizeof(t_vec) * a);
+	// mlx->light = (t_light *)malloc(sizeof(t_light) * l);
 	mlx->l = a;
 	return (0);
 }
